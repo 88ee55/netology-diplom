@@ -185,7 +185,7 @@ function kube_app() {
 function kube_config_github() {
 
     # sa 4 deploy
-    kubectl create sa deploy -n app
+    kubectl create sa deploy -n $app_ns
     kubectl create clusterrolebinding deploy --clusterrole=edit --serviceaccount=$app_ns:deploy 
 
     context=$(kubectl config current-context)
@@ -217,7 +217,7 @@ users:
   - name: ${serviceAccount}
     user:
       token: ${token}
-current-context: ${serviceAccount}@${clusterName}" | base64 > ${sa_github}.yaml
+current-context: ${serviceAccount}@${clusterName}" | base64 -w0 > ${sa_github}.yaml
 }
 
 # main
