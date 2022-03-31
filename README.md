@@ -28,7 +28,7 @@
 
 
 2. Пример pull request с комментариями созданными atlantis'ом или снимки экрана из Terraform Cloud.
-![Terraform Cloud](terraform.png)
+![Terraform Cloud](cloud.png)
 3. ~~Репозиторий с конфигурацией ansible, если был выбран способ создания Kubernetes кластера при помощи ansible.~~
 4. Репозиторий с Dockerfile тестового приложения и ссылка на собранный docker image.
 [app](https://github.com/88ee55/netology-app)
